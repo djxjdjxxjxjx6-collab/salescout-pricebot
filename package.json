@@ -1,14 +1,36 @@
 {
-  "name": "salescout-intern-task",
-  "version": "0.1.0",
+  "name": "salescout-pricebot",
+  "version": "1.0.0",
   "private": true,
   "type": "module",
-  "engines": { "node": ">=20" },
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
-    "typecheck": "tsc --noEmit",
-    "test": "echo \"Добавьте свои тесты\" && exit 1"
+    "server": "tsx server/index.ts",
+    "dev:server": "tsx watch server/index.ts",
+    "dev:web": "vite",
+    "build:web": "vite build",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
   },
   "devDependencies": {
-    "typescript": "^5.6.0"
+    "@types/express": "^5.0.3",
+    "@types/node": "^20.19.0",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "@types/supertest": "^6.0.3",
+    "@vitejs/plugin-react": "^4.6.0",
+    "supertest": "^7.1.1",
+    "tsx": "^4.20.3",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.5",
+    "vitest": "^3.2.4"
   }
 }
